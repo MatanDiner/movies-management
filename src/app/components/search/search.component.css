@@ -1,0 +1,9 @@
+#searchDiv{
+display: flex;
+justify-content: center;
+}
+
+#search{
+    border-radius: 15px;
+    padding-left: 5px;
+}

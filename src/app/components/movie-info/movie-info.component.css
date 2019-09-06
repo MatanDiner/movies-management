@@ -1,0 +1,44 @@
+.info{
+display: grid;
+grid-template-rows: 20% 20% 20% 20% 20% ;
+margin-bottom: 20px;
+grid-row-gap: 20px;
+text-align: center;
+}
+
+.info-detail{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-column-gap: 10px;
+}
+
+.okBtnDiv{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.okBtn{
+    box-sizing: border-box;
+    width: 59px;
+    border-radius: 15px;
+    border-style: none;
+    background-color: lightgray;
+    color: green;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.okBtn:hover{
+    background-color:green;
+    color: white;
+    
+}
+
+.field{
+    color: blue;
+}
+
+.field-value{
+    color: red;
+}

@@ -1,0 +1,61 @@
+.movie{
+    margin-top: 10px;
+    position: relative;
+}
+
+.movie-img{
+    width: 300px;
+    height: 300px;
+    border-radius: 35px;
+}
+
+.movie-img:hover + .movie-dimWrap,.movie-dimWrap:hover{
+display: block;
+}
+
+.movie-dimWrap{
+    display: none;
+    position: absolute;
+    bottom: 4px;
+    width: 300px;
+    height: 301px;
+
+}
+
+
+.movie-dimWrap-dimDiv{
+    width: 300px;
+    height: 301px;
+    border-radius: 35px;
+    opacity: 0.75;
+    background-color: white;
+}
+
+
+.movie-dimWrap-iconsDiv{
+    width: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    bottom: 45px;
+    z-index: 1;
+}
+
+.icon-info,.icon-edit,.icon-delete{
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.icon-info:hover{
+    color: blue;
+}
+
+.icon-edit:hover{
+    color: green;
+}
+
+.icon-delete:hover{
+    color: red;
+}
+
+

@@ -1,0 +1,27 @@
+<div>
+    <div class="info">
+        <div class="info-detail">
+            <div class="field">Title:</div>
+            <div  class="field-value">{{movie.Title | titlecase}}</div>
+        </div>
+        <div class="info-detail">
+            <div  class="field">Year:</div>
+            <div class="field-value">{{movie.Year}}</div>
+        </div>
+        <div class="info-detail">
+            <div  class="field">Runtime(hr):</div>
+            <div class="field-value">{{movie.Runtime | minuteSeconds}}</div>
+        </div>
+        <div class="info-detail">
+            <div  class="field">Genre:</div>
+            <div class="field-value">{{movie.Genre | titlecase}}</div>
+        </div>
+        <div class="info-detail">
+            <div  class="field">Director:</div>
+            <div class="field-value">{{movie.Director | titlecase}}</div>
+        </div>
+    </div>
+    <div class="okBtnDiv">
+        <button class="okBtn" (click)="onOkClicked()">OK</button>
+    </div>
+</div>

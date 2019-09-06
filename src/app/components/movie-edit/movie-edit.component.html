@@ -1,0 +1,59 @@
+<form [formGroup]="formGroup" (submit)="onSubmit()">
+    <div class="editForm">
+        <input type="text" placeholder="Title" formControlName="Title">
+        <div *ngIf="formGroup.invalid && (formGroup.dirty || formGroup.touched)">
+            <div *ngIf="formGroup.get('Title').errors?.required" class="alert">
+                must be not empty!
+            </div>
+            <div *ngIf="formGroup.get('Title').errors?.maxlength" class="alert">
+                maximum 30 digits
+            </div>
+        </div>
+        <input type="text" placeholder="Year" formControlName="Year">
+        <div *ngIf="formGroup.invalid && (formGroup.dirty || formGroup.touched)">
+            <div *ngIf="formGroup.get('Year').errors?.required" class="alert">
+                must be not empty!
+            </div>
+            <div *ngIf="formGroup.get('Year').errors?.maxlength" class="alert">
+                maximum 4 digits
+            </div>
+            <div *ngIf="formGroup.get('Year').errors?.isNumber" class="alert">
+                must be number
+            </div>
+        </div>
+        <input type="text" placeholder="Runtime(min)" formControlName="Runtime">
+        <div *ngIf="formGroup.invalid && (formGroup.dirty || formGroup.touched)">
+            <div *ngIf="formGroup.get('Runtime').errors?.required" class="alert">
+                must be not empty!
+            </div>
+            <div *ngIf="formGroup.get('Runtime').errors?.maxlength" class="alert">
+                maximum 3 digits
+            </div>
+            <div *ngIf="formGroup.get('Runtime').errors?.isNumber" class="alert">
+                must be number
+            </div>
+        </div>
+        <input type="text" placeholder="Genre" formControlName="Genre">
+        <div *ngIf="formGroup.invalid && (formGroup.dirty || formGroup.touched)">
+            <div *ngIf="formGroup.get('Genre').errors?.required" class="alert">
+                must be not empty!
+            </div>
+            <div *ngIf="formGroup.get('Genre').errors?.maxlength" class="alert">
+                maximum 30 digits
+            </div>
+        </div>
+        <input type="text" placeholder="Director" formControlName="Director">
+        <div *ngIf="formGroup.invalid && (formGroup.dirty || formGroup.touched)">
+            <div *ngIf="formGroup.get('Director').errors?.required" class="alert">
+                must be not empty!
+            </div>
+            <div *ngIf="formGroup.get('Director').errors?.maxlength" class="alert">
+                maximum 30 digits
+            </div>
+        </div>
+    </div>
+    <div class="formBtn">
+        <button class="cancelBtn" (click)="onCancel()">Cancel</button>
+        <button class="saveBtn" [disabled]="!formGroup.valid">Save</button>
+    </div>
+</form>

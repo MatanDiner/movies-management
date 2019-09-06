@@ -1,0 +1,40 @@
+.delete{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.delete-p{
+    text-align: center;
+}
+
+.delete-btnDiv{
+    display: flex;
+    justify-content: space-around;
+}
+
+.cancelBtn,.saveBtn{
+    background-color: lightgray;
+    border-style: none;
+    border-radius: 15px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.cancelBtn{
+    color: brown;
+}
+.saveBtn{
+    color: green;
+}
+
+.cancelBtn:hover,.saveBtn:hover{
+color: white;
+}
+
+.cancelBtn:hover{
+    background-color: brown;
+}
+.saveBtn:hover{
+    background-color: green;
+}

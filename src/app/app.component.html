@@ -1,0 +1,28 @@
+<div>
+  <header>
+    <app-header></app-header>
+  </header>
+  <main>
+    <app-search></app-search>
+    <app-movies-list [movies]="movies" *ngIf="movies"></app-movies-list>
+  </main>
+</div>
+
+<div *ngIf="movie && !isCanceled"></div>
+<app-modal *ngIf="movie && iconType==='info' && !isCanceled">
+  <app-movie-info [movie]="movie" (cancel)="onCancel($event)"></app-movie-info>
+</app-modal>
+
+<app-modal *ngIf="movie && iconType==='delete' && !isCanceled">
+  <app-movie-delete [movie]="movie" (cancel)="onCancel($event)"></app-movie-delete>
+</app-modal>
+
+<app-modal *ngIf="movie && iconType==='edit' && !isCanceled">
+  <app-movie-edit [movie]="movie" (cancel)="onCancel($event)"></app-movie-edit>
+</app-modal>
+
+<app-modal *ngIf="iconType==='add' && !isCanceled">
+  <app-movie-add (cancel)="onCancel($event)"></app-movie-add>
+</app-modal>
+
+<router-outlet></router-outlet>

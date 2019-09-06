@@ -1,0 +1,11 @@
+<div *ngIf="movie" class="movie">
+    <img [src]="movie.img" class="movie-img" />
+    <div class="movie-dimWrap">
+        <div class="movie-dimWrap-dimDiv"></div>
+        <div class="movie-dimWrap-iconsDiv">
+            <mat-icon class="icon-info" (click)="onIconClicked('info')">info</mat-icon>
+            <mat-icon class="icon-edit" (click)="onIconClicked('edit')">edit</mat-icon>
+            <mat-icon class="icon-delete" (click)="onIconClicked('delete')">delete</mat-icon>
+        </div>
+    </div>
+</div>
